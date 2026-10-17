@@ -992,12 +992,12 @@ body::after {
   });
 
   /* ---------- D2. auto-scroll button (bottom left) ----------
-     Press it and the whole page glides down on its own in about 8 seconds (whatever the
+     Press it and the whole page glides down on its own in about 15 seconds (whatever the
      screen size), starting and stopping softly, playing every scroll animation on the way. Press again to pause. It also stops
      by itself when the visitor scrolls, swipes, uses the keyboard, opens the menu,
      follows a link, or reaches the end. Pressed at the very end, it starts again from the top. */
   var auto = $('.autoscroll'), autoTip = auto && $('.autoscroll__tip', auto);
-  var AUTO_SECONDS = 6.8;     // time at full speed for the whole page; the soft start and stop bring it to about 8 s
+  var AUTO_SECONDS = 14.2;    // time at full speed for the whole page; the soft start and stop bring it to about 15 s
   var autoOn = false, autoPos = 0, autoLast = 0, autoRaf = 0, autoV = 0;
   function maxScroll() { return Math.max(0, (document.scrollingElement || doc).scrollHeight - window.innerHeight); }
   function autoTop() { return Math.max(400, maxScroll() / AUTO_SECONDS); }   // full speed, pixels per second
